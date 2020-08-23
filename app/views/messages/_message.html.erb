@@ -1,15 +1,15 @@
 <div class="message">
   <div class="upper-message">
     <div class="message-user">
-    <%= message.user.name%> <%# 発信者（user_idに紐付く） %>
+      <%= message.user.name%> <%# 発信者（user_idに紐付く） %>
     </div>
     <div class="message-date">
-    <%= message.created_at%> <%# 発信時刻 %>
+      <%= l message.created_at%> <%# 発信時刻 %>
     </div>
   </div>
   <div class="lower-message">
     <div class="message-content">
-    <%= message.content%> <%# 発信内容 %>
+      <%= message.content%> <%# 発信内容 %>
     </div>
   </div>
 </div>
