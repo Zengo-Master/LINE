@@ -3,7 +3,7 @@ class MessagesController < ApplicationController
   def index
     @message = Message.new
     @room = Room.find(params[:room_id]) # params内のroom_id(パスに含まれる)を代入　
-    @messages = @room.messages.includes(:user)
+    # @messages = @room.messages.includes(:user)
   end
 
   def create
