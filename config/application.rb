@@ -10,7 +10,8 @@ module LINE
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
-
+    config.i18n.default_locale = :ja # 日本時間
+    config.time_zone = 'Tokyo' # 東京基準
     config.generators do |g|
       g.stylesheets false
       g.javascripts false

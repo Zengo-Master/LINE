@@ -83,7 +83,7 @@
   background-color: #FAFAFA;
   height: calc(100vh - 190px);
   padding: 46px 40px 0;
-  overflow: scroll;
+  overflow: scroll; /* 溜まってきたら */
 }
 
 .message {
