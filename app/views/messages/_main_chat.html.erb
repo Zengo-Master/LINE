@@ -1,7 +1,7 @@
 <div class="chat-header">
   <div class="left-header">
     <div class="header-title">
-      hogefuga
+      <%= @room.name%>
     </div>
   </div>
   <div class="right-header">
@@ -12,6 +12,7 @@
 </div>
 
 <div class="messages">
+  <%= render partial: 'message', collection: @messages %>
 </div>
 
 <%# form_withの引数に@roomと@messageを渡している %>

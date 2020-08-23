@@ -14,6 +14,7 @@ class MessagesController < ApplicationController
       redirect_to room_messages_path(@room)
     # 保存できなければ、indexアクションで同じページへ
     else
+      @messages = @room.messages.includes(:user)
       render :index
     end
   end
