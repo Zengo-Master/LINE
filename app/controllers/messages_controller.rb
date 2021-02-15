@@ -3,8 +3,8 @@ class MessagesController < ApplicationController
   def index
     @message = Message.new
     @room = Room.find(params[:room_id]) # params内のroom_id(パスに含まれる)を代入　
-    @messages = @room.messages.includes(:user) # 表示するインスタンス
-  end
+    @messages = @room.messages.includes(:user).order("created_at DESC") # 表示するインスタンス
+  end                                                                   # 降順に表示
 
   def create
     @room = Room.find(params[:room_id])
